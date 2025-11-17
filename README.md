@@ -1,6 +1,18 @@
+```
+██████╗  ██████╗ ███╗   ███╗██████╗  █████╗  ██████╗██╗  ██╗
+██╔══██╗██╔═══██╗████╗ ████║██╔══██╗██╔══██╗██╔════╝██║ ██╔╝
+██████╔╝██║   ██║██╔████╔██║██████╔╝███████║██║     █████╔╝ 
+██╔═══╝ ██║   ██║██║╚██╔╝██║██╔══██╗██╔══██║██║     ██╔═██╗ 
+██║     ╚██████╔╝██║ ╚═╝ ██║██████╔╝██║  ██║╚██████╗██║  ██╗
+╚═╝      ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+      Domain-Based Python Tech-Stack Installer
+```
+
+
+
 # 📦 Dompack – Domain-Based Python Tech-Stack Installer
 
-Dompack lets you install complete Python tech stacks using short domain aliases:
+Dompack installs complete Python tech stacks using short domain aliases:
 
 ```
 dompack install fa      # FastAPI stack
@@ -10,20 +22,55 @@ dompack install ai      # AI / NLP
 dompack install all     # Everything
 ```
 
-It removes the headache of installing individual packages.  
-Dompack gives you **clean, curated, domain-based bundles** for fast development.
+Dompack removes the headache of installing many libraries manually.  
+It gives you curated, domain-based bundles designed for fast development.
 
 ---
 
 ## 🚀 Features
 
-- 📌 Install full tech stacks with one command  
-- 🎯 Short domain aliases (`fa`, `fl`, `dj`, `ml`, `ai`, `db`, …)  
-- 🧰 Curated, production-ready bundles  
-- 🔐 Security, auth & cryptography stack  
-- 🎨 GUI, CV, AV, ML, AI, Web, DevOps and Testing bundles  
-- 🧪 Works on Windows, Linux and macOS  
-- 🎉 Acts like a mini pip package manager  
+### 🟦 Core Features
+- 📦 Install entire Python stacks using domain aliases  
+- ⚡ Clean, curated, production-ready bundles  
+- 🎯 Short aliases (`fa`, `fl`, `dj`, `ml`, `ai`, `db`, …)  
+- 🧪 Works on Windows, Linux, macOS  
+- 🔐 Includes Security, Cryptography & Auth bundles  
+- ⚙️ Supports ML, AI, DL, CV, GUI, DevOps, Web, File, Testing  
+- 📦 Acts like a mini package manager (son of pip)
+
+---
+
+## 🆕 New Advanced CLI Features
+
+### 🔧 Upgrade bundles
+```
+dompack upgrade <bundle>
+```
+
+### 🔍 Search inside bundles
+```
+dompack search <keyword>
+```
+
+### 🩺 Environment Doctor
+```
+dompack doctor
+```
+
+### 🔄 Self-update
+```
+dompack update-self
+```
+
+### 📝 Generate requirements.txt from bundle
+```
+dompack req <bundle>
+```
+
+### 🧱 Create custom bundles
+```
+dompack create-bundle <name> <pkg1> <pkg2> ...
+```
 
 ---
 
@@ -33,7 +80,7 @@ Dompack gives you **clean, curated, domain-based bundles** for fast development.
 pip install dompack
 ```
 
-Or local editable mode:
+Local development install:
 
 ```
 pip install -e .
@@ -73,51 +120,67 @@ dompack install all
 |-------|--------|-------------|
 | `db`, `da` | Databases | PostgreSQL, MySQL, MongoDB, Redis |
 | `ds` | Data Science | numpy, pandas, matplotlib, scipy |
-| `ml` | Machine Learning | sklearn, joblib, matplotlib |
+| `ml` | Machine Learning | scikit-learn, joblib |
 | `ai` | AI / NLP | transformers, tokenizers |
 | `dl` | Deep Learning | torch, torchvision |
-| `cv` | Computer Vision | opencv-python, pillow, scikit-image |
+| `cv` | Computer Vision | opencv-python, scikit-image, pillow |
 | `gui` | GUI | PyQt5, Kivy |
-| `av` | Audio/Video | librosa, moviepy, ffmpeg-python |
+| `av` | Audio / Video | librosa, moviepy |
 | `web` | Web Utils | requests, httpx, beautifulsoup4 |
 | `fa`, `fastapi` | FastAPI Stack | fastapi, uvicorn, pydantic |
 | `fl`, `flask` | Flask Stack | flask & extensions |
 | `dj`, `django` | Django Stack | django, DRF, cors headers |
 | `net` | Networking | aiohttp, websockets, paramiko |
-| `security`, `auth`, `sec`, `cyber` | Security & Auth | JWT, cryptography, passlib |
+| `security`, `sec`, `auth`, `cyber` | Security | JWT, cryptography, passlib |
 | `devops` | DevOps | docker, ansible |
 | `testing` | Testing | pytest, black, flake8 |
 | `file` | File Processing | docx, pypdf2, openpyxl |
 | `utils` | Utilities | dotenv, rich, loguru |
-| `fullstack` | Mixed Full-Stack | Django + FastAPI + Flask |
-| `all` | EVERYTHING | All bundles combined |
+| `fullstack` | Mixed Stack | Django + FastAPI + Flask |
+| `all` | Everything | All bundles combined |
 
 ---
 
 ## 🧭 Examples
 
-Install FastAPI tools:
-
+### FastAPI install
 ```
 dompack install fa
 ```
 
-Install Django stack:
-
+### Django install
 ```
 dompack install dj
 ```
 
-Install Machine Learning:
-
+### Machine Learning setup
 ```
 dompack install ml
 ```
 
-Install EVERYTHING:
-
+### Install EVERYTHING
 ```
 dompack install all
+```
+
+### Upgrade a bundle
+```
+dompack upgrade security
+```
+
+### Search packages
+```
+dompack search mongo
+```
+
+### Generate requirements.txt
+```
+dompack req ml
+```
+
+### Environment doctor
+```
+dompack doctor
 ```
 
 ---
@@ -130,9 +193,16 @@ MIT License © 2025 Veeresh Hanni
 
 ## ⭐ Support
 
-If you find Dompack useful:
+If Dompack helps you:
 
 - ⭐ Star it on GitHub  
-- 📦 Share it with Python developers  
-- 🛠 Suggest new bundles (Web3, Automation, NLP, CV, etc.)
+- 🛠 Contribute new bundles  
+- 📦 Share it with the Python community  
 
+![Dompack Logo](https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-python-computer-programming-icons-flaticons-lineal-color-flat-icons.png)
+
+![PyPI Version](https://img.shields.io/pypi/v/dompack?color=blue&label=PyPI&logo=python)
+![PyPI Downloads](https://img.shields.io/pypi/dm/dompack?color=success)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Python Versions](https://img.shields.io/pypi/pyversions/dompack)
