@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dompack"
-version = "0.1.0"
+version = "0.1.1"
 description = "Dompack — curated domain-based Python tech stack installer"
-authors = [{ name = "Veeresh H" }]
+authors = [{ name = "Veeresh Hanni" }]
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
