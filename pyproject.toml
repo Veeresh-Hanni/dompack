@@ -1,0 +1,246 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dompack"
+version = "0.1.0"
+description = "Dompack — curated domain-based Python tech stack installer"
+authors = [{ name = "Veeresh H" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+dompack = "dompack.cli:main"
+
+[project.optional-dependencies]
+
+db = [
+  "psycopg2-binary",
+  "pymysql",
+  "pymongo",
+  "motor",
+  "redis"
+]
+
+da = [
+  "psycopg2-binary",
+  "pymysql",
+  "pymongo",
+  "motor",
+  "redis"
+]
+
+ds = [
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "scipy",
+  "statsmodels"
+]
+
+ml = [
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "joblib",
+  "matplotlib"
+]
+
+ai = [
+  "transformers",
+  "sentencepiece",
+  "tokenizers"
+]
+
+dl = [
+  "torch",
+  "torchvision"
+]
+
+cv = [
+  "opencv-python",
+  "scikit-image",
+  "pillow"
+]
+
+gui = [
+  "PyQt5",
+  "kivy"
+]
+
+av = [
+  "librosa",
+  "moviepy",
+  "ffmpeg-python"
+]
+
+web = [
+  "requests",
+  "httpx",
+  "beautifulsoup4",
+  "lxml"
+]
+
+fa = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "python-dotenv",
+  "python-multipart",
+  "jinja2",
+  "sqlalchemy"
+]
+
+fastapi = [
+  "fastapi",
+  "uvicorn[standard]",
+  "pydantic",
+  "python-dotenv",
+  "python-multipart",
+  "jinja2",
+  "sqlalchemy"
+]
+
+fl = [
+  "Flask",
+  "Flask-CORS",
+  "Flask-RESTful",
+  "Flask-JWT-Extended",
+  "Flask-Migrate"
+]
+
+flask = [
+  "Flask",
+  "Flask-CORS",
+  "Flask-RESTful",
+  "Flask-JWT-Extended",
+  "Flask-Migrate"
+]
+
+dj = [
+  "Django",
+  "djangorestframework",
+  "django-cors-headers",
+  "django-environ",
+  "whitenoise"
+]
+
+django = [
+  "Django",
+  "djangorestframework",
+  "django-cors-headers",
+  "django-environ",
+  "whitenoise"
+]
+
+net = [
+  "aiohttp",
+  "websockets",
+  "dnspython",
+  "paramiko"
+]
+
+security = [
+  "cryptography",
+  "PyJWT",
+  "passlib[bcrypt]",
+  "pycryptodome"
+]
+
+sec = [
+  "cryptography",
+  "PyJWT",
+  "passlib[bcrypt]",
+  "pycryptodome"
+]
+
+auth = [
+  "cryptography",
+  "PyJWT",
+  "passlib[bcrypt]",
+  "pycryptodome"
+]
+
+cyber = [
+  "cryptography",
+  "PyJWT",
+  "passlib[bcrypt]",
+  "pycryptodome"
+]
+
+cybersec = [
+  "cryptography",
+  "PyJWT",
+  "passlib[bcrypt]",
+  "pycryptodome"
+]
+
+devops = [
+  "docker",
+  "docker-compose",
+  "ansible"
+]
+
+testing = [
+  "pytest",
+  "pytest-cov",
+  "black",
+  "flake8",
+  "isort",
+  "mypy"
+]
+
+file = [
+  "openpyxl",
+  "python-docx",
+  "pypdf2"
+]
+
+utils = [
+  "python-dotenv",
+  "loguru",
+  "rich"
+]
+
+fullstack = [
+  "fastapi",
+  "uvicorn[standard]",
+  "Django",
+  "Flask",
+  "SQLAlchemy",
+  "psycopg2-binary",
+  "pymysql",
+  "pymongo"
+]
+
+all = [
+  "psycopg2-binary","pymysql","pymongo","motor","redis",
+  "numpy","pandas","matplotlib","scipy","statsmodels",
+  "scikit-learn","joblib",
+  "transformers","sentencepiece","tokenizers",
+  "torch","torchvision",
+  "opencv-python","scikit-image","pillow",
+  "PyQt5","kivy",
+  "librosa","moviepy","ffmpeg-python",
+  "requests","httpx","beautifulsoup4","lxml",
+  "fastapi","uvicorn[standard]","pydantic","python-dotenv","python-multipart","jinja2","sqlalchemy",
+  "Flask","Flask-CORS","Flask-RESTful",
+  "Django","djangorestframework","django-cors-headers","django-environ","whitenoise",
+  "aiohttp","websockets","paramiko",
+  "cryptography","PyJWT","passlib[bcrypt]","pycryptodome",
+  "docker","docker-compose","ansible",
+  "pytest","pytest-cov","black","flake8","isort","mypy",
+  "openpyxl","python-docx","pypdf2",
+  "python-dotenv","loguru","rich"
+]
+
+[tool.setuptools]
+packages = ["dompack"]
