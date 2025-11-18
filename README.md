@@ -1,3 +1,4 @@
+
 ```
 ██████╗  ██████╗ ███╗   ███╗██████╗  █████╗  ██████╗██╗  ██╗
 ██╔══██╗██╔═══██╗████╗ ████║██╔══██╗██╔══██╗██╔════╝██║ ██╔╝
@@ -8,6 +9,10 @@
       Domain-Based Python Tech-Stack Installer
 ```
 
+<p align="center"> <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-python-computer-programming-icons-flaticons-lineal-color-flat-icons.png" /></p>
+
+<p align="center"><img src="https://img.shields.io/badge/version-v0.1.1-blue?logo=python
+" /> <img src="https://img.shields.io/pypi/dm/dompack?color=success" /> <img src="https://img.shields.io/badge/license-MIT-green" /> <img src="https://img.shields.io/badge/status-active-brightgreen" /> <img src="https://img.shields.io/pypi/pyversions/dompack" /> </p>
 
 
 # 📦 Dompack – Domain-Based Python Tech-Stack Installer
@@ -199,10 +204,3 @@ If Dompack helps you:
 - 🛠 Contribute new bundles  
 - 📦 Share it with the Python community  
 
-![Dompack Logo](https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-python-computer-programming-icons-flaticons-lineal-color-flat-icons.png)
-
-![PyPI Version](https://img.shields.io/pypi/v/dompack?color=blue&label=PyPI&logo=python)
-![PyPI Downloads](https://img.shields.io/pypi/dm/dompack?color=success)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
-![Python Versions](https://img.shields.io/pypi/pyversions/dompack)
