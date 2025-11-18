@@ -243,4 +243,7 @@ all = [
 ]
 
 [tool.setuptools]
-packages = ["dompack"]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
