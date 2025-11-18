@@ -8,11 +8,16 @@
 ╚═╝      ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
       Domain-Based Python Tech-Stack Installer
 ```
-
-<p align="center"> <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-python-computer-programming-icons-flaticons-lineal-color-flat-icons.png" /></p>
-
-<p align="center"><img src="https://img.shields.io/badge/version-v0.1.1-blue?logo=python
-" /> <img src="https://img.shields.io/pypi/dm/dompack?color=success" /> <img src="https://img.shields.io/badge/license-MIT-green" /> <img src="https://img.shields.io/badge/status-active-brightgreen" /> <img src="https://img.shields.io/pypi/pyversions/dompack" /> </p>
+<br>
+<p align="center">
+  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-python-computer-programming-icons-flaticons-lineal-color-flat-icons.png" />
+  <br><br>
+  <img src="https://img.shields.io/badge/version-v0.1.1-blue?logo=python" />
+  <img src="https://img.shields.io/pypi/dm/dompack?color=success" />
+  <img src="https://img.shields.io/badge/license-MIT-green" />
+  <img src="https://img.shields.io/badge/status-active-brightgreen" />
+  <img src="https://img.shields.io/pypi/pyversions/dompack" />
+</p>
 
 
 # 📦 Dompack – Domain-Based Python Tech-Stack Installer
