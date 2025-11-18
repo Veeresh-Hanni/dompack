@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dompack"
-version = "0.1.1"
+version = "0.1.2"
 description = "Dompack — curated domain-based Python tech stack installer"
 authors = [{ name = "Veeresh Hanni" , email = "veereshhanni347@gmail.com"}]
 readme = "README.md"
