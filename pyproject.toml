@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "dompack"
 version = "0.1.1"
 description = "Dompack — curated domain-based Python tech stack installer"
-authors = [{ name = "Veeresh Hanni" }]
+authors = [{ name = "Veeresh Hanni" , email = "veereshhanni347@gmail.com"}]
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
