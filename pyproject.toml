@@ -3,10 +3,10 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dompack"
-version = "1.1.1"
-description = "Dompack — curated domain-based Python tech stack installer"
-authors = [{ name = "Veeresh Hanni" , email = "veereshhanni347@gmail.com"}]
+name = "dompk"
+version = "0.0.2"
+description = "Dompack - curated domain-based Python tech stack installer"
+authors = [{ name = "Veeresh Hanni", email = "veereshhanni347@gmail.com" }]
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
@@ -19,75 +19,31 @@ dependencies = []
 
 [project.scripts]
 dompack = "dompack.cli:main"
+dompk = "dompack.cli:main"
 
 [project.optional-dependencies]
+db = ["psycopg2-binary", "pymysql", "pymongo", "motor", "redis"]
+da = ["psycopg2-binary", "pymysql", "pymongo", "motor", "redis"]
 
-db = [
-  "psycopg2-binary",
-  "pymysql",
-  "pymongo",
-  "motor",
-  "redis"
-]
-
-da = [
-  "psycopg2-binary",
-  "pymysql",
-  "pymongo",
-  "motor",
-  "redis"
-]
-
-ds = [
-  "numpy",
-  "pandas",
-  "matplotlib",
-  "scipy",
-  "statsmodels"
-]
-
-ml = [
-  "numpy",
-  "pandas",
-  "scikit-learn",
-  "joblib",
-  "matplotlib"
-]
-
-ai = [
-  "transformers",
-  "sentencepiece",
-  "tokenizers"
-]
-
+ds = ["numpy", "pandas", "matplotlib", "scipy", "statsmodels"]
+ml = ["numpy", "pandas", "scikit-learn", "joblib", "matplotlib"]
+ai = ["transformers", "sentencepiece", "tokenizers"]
 dl = [
-  "torch",
-  "torchvision"
+  "torch; python_version >= '3.9' and python_version < '3.14'",
+  "torchvision; python_version >= '3.9' and python_version < '3.14'",
 ]
+cv = ["opencv-python; platform_python_implementation == 'CPython'", "scikit-image", "pillow"]
 
-cv = [
-  "opencv-python",
-  "scikit-image",
-  "pillow"
-]
+gui = ["PyQt5; python_version < '3.13'", "kivy; python_version < '3.13'"]
+av = ["librosa", "moviepy", "ffmpeg-python"]
+web = ["requests", "httpx", "beautifulsoup4", "lxml"]
 
-gui = [
-  "PyQt5",
-  "kivy"
-]
-
-av = [
-  "librosa",
-  "moviepy",
-  "ffmpeg-python"
-]
-
-web = [
-  "requests",
-  "httpx",
-  "beautifulsoup4",
-  "lxml"
-]
+common = ["requests", "httpx", "python-dotenv", "pydantic", "rich", "loguru"]
+core = ["requests", "httpx", "python-dotenv", "pydantic", "rich", "loguru"]
+base = ["requests", "httpx", "python-dotenv", "pydantic", "rich", "loguru"]
+bootstrap = ["pip", "setuptools", "wheel", "build", "packaging", "virtualenv", "pip-tools", "twine"]
+boot = ["pip", "setuptools", "wheel", "build", "packaging", "virtualenv", "pip-tools", "twine"]
+pytools = ["pip", "setuptools", "wheel", "build", "packaging", "virtualenv", "pip-tools", "twine"]
 
 fa = [
   "fastapi",
@@ -96,9 +52,8 @@ fa = [
   "python-dotenv",
   "python-multipart",
   "jinja2",
-  "sqlalchemy"
+  "sqlalchemy",
 ]
-
 fastapi = [
   "fastapi",
   "uvicorn[standard]",
@@ -106,144 +61,119 @@ fastapi = [
   "python-dotenv",
   "python-multipart",
   "jinja2",
-  "sqlalchemy"
+  "sqlalchemy",
 ]
 
-fl = [
-  "Flask",
-  "Flask-CORS",
-  "Flask-RESTful",
-  "Flask-JWT-Extended",
-  "Flask-Migrate"
-]
+fl = ["Flask", "Flask-CORS", "Flask-RESTful", "Flask-JWT-Extended", "Flask-Migrate"]
+flask = ["Flask", "Flask-CORS", "Flask-RESTful", "Flask-JWT-Extended", "Flask-Migrate"]
 
-flask = [
-  "Flask",
-  "Flask-CORS",
-  "Flask-RESTful",
-  "Flask-JWT-Extended",
-  "Flask-Migrate"
-]
+dj = ["Django", "djangorestframework", "django-cors-headers", "django-environ", "whitenoise"]
+django = ["Django", "djangorestframework", "django-cors-headers", "django-environ", "whitenoise"]
 
-dj = [
-  "Django",
-  "djangorestframework",
-  "django-cors-headers",
-  "django-environ",
-  "whitenoise"
-]
+net = ["aiohttp", "websockets", "dnspython", "paramiko"]
 
-django = [
-  "Django",
-  "djangorestframework",
-  "django-cors-headers",
-  "django-environ",
-  "whitenoise"
-]
+security = ["cryptography", "PyJWT", "passlib[bcrypt]", "pycryptodome"]
+sec = ["cryptography", "PyJWT", "passlib[bcrypt]", "pycryptodome"]
+auth = ["cryptography", "PyJWT", "passlib[bcrypt]", "pycryptodome"]
+cyber = ["cryptography", "PyJWT", "passlib[bcrypt]", "pycryptodome"]
+cybersec = ["cryptography", "PyJWT", "passlib[bcrypt]", "pycryptodome"]
 
-net = [
-  "aiohttp",
-  "websockets",
-  "dnspython",
-  "paramiko"
-]
-
-security = [
-  "cryptography",
-  "PyJWT",
-  "passlib[bcrypt]",
-  "pycryptodome"
-]
-
-sec = [
-  "cryptography",
-  "PyJWT",
-  "passlib[bcrypt]",
-  "pycryptodome"
-]
-
-auth = [
-  "cryptography",
-  "PyJWT",
-  "passlib[bcrypt]",
-  "pycryptodome"
-]
-
-cyber = [
-  "cryptography",
-  "PyJWT",
-  "passlib[bcrypt]",
-  "pycryptodome"
-]
-
-cybersec = [
-  "cryptography",
-  "PyJWT",
-  "passlib[bcrypt]",
-  "pycryptodome"
-]
-
-devops = [
-  "docker",
-  "docker-compose",
-  "ansible"
-]
-
-testing = [
-  "pytest",
-  "pytest-cov",
-  "black",
-  "flake8",
-  "isort",
-  "mypy"
-]
-
-file = [
-  "openpyxl",
-  "python-docx",
-  "pypdf2"
-]
-
-utils = [
-  "python-dotenv",
-  "loguru",
-  "rich"
-]
+devops = ["docker", "docker-compose", "ansible"]
+testing = ["pytest", "pytest-cov", "black", "flake8", "isort", "mypy"]
+file = ["openpyxl", "python-docx", "pypdf2"]
+utils = ["python-dotenv", "loguru", "rich"]
 
 fullstack = [
   "fastapi",
   "uvicorn[standard]",
   "Django",
   "Flask",
-  "SQLAlchemy",
+  "sqlalchemy",
   "psycopg2-binary",
   "pymysql",
-  "pymongo"
+  "pymongo",
 ]
 
 all = [
-  "psycopg2-binary","pymysql","pymongo","motor","redis",
-  "numpy","pandas","matplotlib","scipy","statsmodels",
-  "scikit-learn","joblib",
-  "transformers","sentencepiece","tokenizers",
-  "torch","torchvision",
-  "opencv-python","scikit-image","pillow",
-  "PyQt5","kivy",
-  "librosa","moviepy","ffmpeg-python",
-  "requests","httpx","beautifulsoup4","lxml",
-  "fastapi","uvicorn[standard]","pydantic","python-dotenv","python-multipart","jinja2","sqlalchemy",
-  "Flask","Flask-CORS","Flask-RESTful",
-  "Django","djangorestframework","django-cors-headers","django-environ","whitenoise",
-  "aiohttp","websockets","paramiko",
-  "cryptography","PyJWT","passlib[bcrypt]","pycryptodome",
-  "docker","docker-compose","ansible",
-  "pytest","pytest-cov","black","flake8","isort","mypy",
-  "openpyxl","python-docx","pypdf2",
-  "python-dotenv","loguru","rich"
+  "aiohttp",
+  "ansible",
+  "beautifulsoup4",
+  "black",
+  "build",
+  "cryptography",
+  "Django",
+  "django-cors-headers",
+  "django-environ",
+  "dnspython",
+  "docker",
+  "docker-compose",
+  "fastapi",
+  "ffmpeg-python",
+  "flake8",
+  "Flask",
+  "Flask-CORS",
+  "Flask-JWT-Extended",
+  "Flask-Migrate",
+  "Flask-RESTful",
+  "httpx",
+  "isort",
+  "jinja2",
+  "joblib",
+  "kivy; python_version < '3.13'",
+  "librosa",
+  "loguru",
+  "lxml",
+  "matplotlib",
+  "motor",
+  "moviepy",
+  "mypy",
+  "numpy",
+  "opencv-python; platform_python_implementation == 'CPython'",
+  "openpyxl",
+  "pandas",
+  "paramiko",
+  "passlib[bcrypt]",
+  "packaging",
+  "pillow",
+  "psycopg2-binary",
+  "pydantic",
+  "pycryptodome",
+  "PyJWT",
+  "pymongo",
+  "pymysql",
+  "pypdf2",
+  "PyQt5; python_version < '3.13'",
+  "pytest",
+  "pytest-cov",
+  "pip",
+  "pip-tools",
+  "python-docx",
+  "python-dotenv",
+  "python-multipart",
+  "redis",
+  "requests",
+  "rich",
+  "scikit-image",
+  "scikit-learn",
+  "scipy",
+  "sentencepiece",
+  "setuptools",
+  "sqlalchemy",
+  "statsmodels",
+  "tokenizers",
+  "torch; python_version >= '3.9' and python_version < '3.14'",
+  "torchvision; python_version >= '3.9' and python_version < '3.14'",
+  "transformers",
+  "uvicorn[standard]",
+  "virtualenv",
+  "websockets",
+  "whitenoise",
+  "wheel",
+  "twine",
 ]
 
 [tool.setuptools]
-package-dir = {"" = "."}
+package-dir = { "" = "." }
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -1,105 +1,69 @@
-# 🤝 Contributing to Dompack
+# Contributing
 
-Thank you for your interest in contributing!  
-Follow this guide to contribute safely and effectively.
+Thanks for contributing to Dompack.
 
----
-
-## 🛠 Requirements
+## Prerequisites
 
 - Python 3.8+
-- pip / venv
-- GitHub account
-- Basic understanding of Python packaging
+- Git
 
----
+## Setup
 
-## 🚀 Getting Started
-
-### 1. Fork the repository
-Click **Fork** on GitHub.
-
-### 2. Clone your fork
-```
+```bash
 git clone https://github.com/<your-username>/dompack.git
 cd dompack
+python -m venv .venv
 ```
 
-### 3. Create a virtual environment
-```
-python -m venv venv
-source venv/bin/activate   # Linux / macOS
-venv\Scripts\activate       # Windows
-```
+Activate:
 
-### 4. Install in editable mode
-```
+- Linux/macOS: `source .venv/bin/activate`
+- Windows PowerShell: `.\.venv\Scripts\Activate.ps1`
+
+Install editable:
+
+```bash
 pip install -e .
 ```
 
----
+## Build
 
-## 🧪 Running Tests
-(Tests coming soon)
-
-```
-pytest
+```bash
+python -m build
+python -m twine check dist/*
 ```
 
----
+## Run CLI Locally
 
-## 📦 Adding New Bundles
-
-Add new bundles in:
-
-```
-dompack/bundles.py
+```bash
+python -m dompack.cli list
+python -m dompack.cli install web
 ```
 
-Each bundle must:
-- Have a short alias  
-- Be added to `EXTRAS = {}`  
-- Contain production-ready, safe packages  
+## Code Guidelines
 
-Example:
-```python
-EXTRAS["automation"] = [
-    "selenium",
-    "pyautogui",
-    "playsound"
-]
-```
+- Keep `dompack/bundles.py` and `pyproject.toml` extras in sync.
+- Prefer Python 3.8-compatible syntax.
+- Keep CLI output clear and actionable.
+- Update docs and changelog with behavior changes.
 
----
+## Release Flow
 
-## 🧾 Commit Guidelines
+1. Bump version in:
+   - `pyproject.toml`
+   - `dompack/__init__.py`
+2. Build:
+   - `python -m build`
+3. Validate:
+   - `python -m twine check dist/*`
+4. Publish:
+   - `python -m twine upload dist/*`
 
-- Use descriptive messages
-- Prefix types:
-  - `feat:` new feature
-  - `fix:` bug fix
-  - `docs:` documentation
-  - `refactor:` code improvements
-  - `perf:` performance
-  - `test:` test-related
+## Commit Prefixes
 
-Example:
-```
-feat: added new AI bundle
-```
-
----
-
-## 🚀 Creating Releases
-
-```
-git tag v0.2.0
-git push --tags
-```
-
-GitHub Actions will publish to PyPI automatically.
-
----
-
-## ❤️ Thank You
-Your contributions help grow Dompack into a universal Python stack manager.
+- `feat:` new feature
+- `fix:` bug fix
+- `docs:` documentation
+- `refactor:` code cleanup
+- `test:` tests
+- `chore:` maintenance

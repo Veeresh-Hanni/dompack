@@ -1,7 +1,9 @@
 # dompack bundle definitions (human/CLI reference)
-# Keep in sync with pyproject.toml's extras.
+# Keep this in sync with pyproject.toml [project.optional-dependencies].
 
-EXTRAS = {}
+from typing import Dict, List
+
+EXTRAS: Dict[str, List[str]] = {}
 
 # Databases (db / da)
 db = [
@@ -44,14 +46,14 @@ EXTRAS["ai"] = ai
 
 # Deep Learning (dl)
 dl = [
-    "torch",
-    "torchvision",
+    "torch; python_version >= '3.9' and python_version < '3.14'",
+    "torchvision; python_version >= '3.9' and python_version < '3.14'",
 ]
 EXTRAS["dl"] = dl
 
 # Computer Vision (cv)
 cv = [
-    "opencv-python",
+    "opencv-python; platform_python_implementation == 'CPython'",
     "scikit-image",
     "pillow",
 ]
@@ -59,9 +61,8 @@ EXTRAS["cv"] = cv
 
 # GUI (gui)
 gui = [
-    "PyQt5",
-    "kivy",
-    "tkinter",
+    "PyQt5; python_version < '3.13'",
+    "kivy; python_version < '3.13'",
 ]
 EXTRAS["gui"] = gui
 
@@ -81,6 +82,34 @@ web = [
     "lxml",
 ]
 EXTRAS["web"] = web
+
+# Common/core stack (common / core / base)
+common = [
+    "requests",
+    "httpx",
+    "python-dotenv",
+    "pydantic",
+    "rich",
+    "loguru",
+]
+EXTRAS["common"] = common
+EXTRAS["core"] = common
+EXTRAS["base"] = common
+
+# Python bootstrap tooling (bootstrap / boot / pytools)
+bootstrap = [
+    "pip",
+    "setuptools",
+    "wheel",
+    "build",
+    "packaging",
+    "virtualenv",
+    "pip-tools",
+    "twine",
+]
+EXTRAS["bootstrap"] = bootstrap
+EXTRAS["boot"] = bootstrap
+EXTRAS["pytools"] = bootstrap
 
 # FastAPI (fa / fastapi)
 fa = [
@@ -174,21 +203,21 @@ utils = [
 ]
 EXTRAS["utils"] = utils
 
-# fullstack
+# Full stack
 fullstack = [
     "fastapi",
     "uvicorn[standard]",
     "Django",
     "Flask",
-    "SQLAlchemy",
+    "sqlalchemy",
     "psycopg2-binary",
     "pymysql",
     "pymongo",
 ]
 EXTRAS["fullstack"] = fullstack
 
-# curated all (final)
-_all = []
-for v in EXTRAS.values():
-    _all.extend(v)
-EXTRAS["all"] = sorted(set(_all))
+# Curated all (deduplicated)
+_all: List[str] = []
+for value in EXTRAS.values():
+    _all.extend(value)
+EXTRAS["all"] = sorted(set(_all), key=str.lower)

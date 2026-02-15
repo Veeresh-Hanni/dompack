@@ -1,211 +1,119 @@
+# Dompack
 
-```
-██████╗  ██████╗ ███╗   ███╗██████╗  █████╗  ██████╗██╗  ██╗
-██╔══██╗██╔═══██╗████╗ ████║██╔══██╗██╔══██╗██╔════╝██║ ██╔╝
-██████╔╝██║   ██║██╔████╔██║██████╔╝███████║██║     █████╔╝ 
-██╔═══╝ ██║   ██║██║╚██╔╝██║██╔══██╗██╔══██║██║     ██╔═██╗ 
-██║     ╚██████╔╝██║ ╚═╝ ██║██████╔╝██║  ██║╚██████╗██║  ██╗
-╚═╝      ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
-      Domain-Based Python Tech-Stack Installer
-```
-<br>
-<p align="center">
-  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-python-computer-programming-icons-flaticons-lineal-color-flat-icons.png" />
-  <br><br>
-  <img src="https://img.shields.io/badge/version-v0.1.1-blue?logo=python" />
-  <img src="https://img.shields.io/pypi/dm/dompack?color=success" />
-  <img src="https://img.shields.io/badge/license-MIT-green" />
-  <img src="https://img.shields.io/badge/status-active-brightgreen" />
-  <img src="https://img.shields.io/pypi/pyversions/dompack" />
-</p>
+Domain-based Python tech stack installer.
 
+Install one package and quickly set up bundles for web, ML, AI, databases, security, and more.
 
-# 📦 Dompack – Domain-Based Python Tech-Stack Installer
+## Install
 
-Dompack installs complete Python tech stacks using short domain aliases:
-
-```
-dompack install fa      # FastAPI stack
-dompack install dj      # Django stack
-dompack install ml      # Machine Learning
-dompack install ai      # AI / NLP
-dompack install all     # Everything
+```bash
+pip install dompk
 ```
 
-Dompack removes the headache of installing many libraries manually.  
-It gives you curated, domain-based bundles designed for fast development.
+Commands after install:
 
----
-
-## 🚀 Features
-
-### 🟦 Core Features
-- 📦 Install entire Python stacks using domain aliases  
-- ⚡ Clean, curated, production-ready bundles  
-- 🎯 Short aliases (`fa`, `fl`, `dj`, `ml`, `ai`, `db`, …)  
-- 🧪 Works on Windows, Linux, macOS  
-- 🔐 Includes Security, Cryptography & Auth bundles  
-- ⚙️ Supports ML, AI, DL, CV, GUI, DevOps, Web, File, Testing  
-- 📦 Acts like a mini package manager (son of pip)
-
----
-
-## 🆕 New Advanced CLI Features
-
-### 🔧 Upgrade bundles
-```
-dompack upgrade <bundle>
+```bash
+dompack --version
+dompk --version
 ```
 
-### 🔍 Search inside bundles
-```
-dompack search <keyword>
-```
+`dompack` and `dompk` both run the same CLI.
 
-### 🩺 Environment Doctor
-```
-dompack doctor
-```
+## Quick Usage
 
-### 🔄 Self-update
-```
-dompack update-self
-```
+List bundles:
 
-### 📝 Generate requirements.txt from bundle
-```
-dompack req <bundle>
-```
-
-### 🧱 Create custom bundles
-```
-dompack create-bundle <name> <pkg1> <pkg2> ...
-```
-
----
-
-## 📥 Installation
-
-```
-pip install dompack
-```
-
-Local development install:
-
-```
-pip install -e .
-```
-
----
-
-## 🧰 CLI Usage
-
-### 🔍 List bundles
-```
+```bash
 dompack list
+dompk list
 ```
 
-### 📦 Install a bundle
-```
+Install a bundle:
+
+```bash
 dompack install <bundle>
+dompk install <bundle>
 ```
+
+Full developer setup:
+
+```bash
+dompack install pydev
+```
+
+Equivalent with alias:
+
+```bash
+dompk install pydev
+```
+
+## Installer Backends
+
+Auto (default, prefers `uv` if available):
+
+```bash
+dompack install web
+dompk install web
+```
+
+Force `uv pip`:
+
+```bash
+dompack --installer uv install web
+dompk --installer uv install web
+```
+
+Force `pip`:
+
+```bash
+dompack --installer pip install web
+dompk --installer pip install web
+```
+
+## Linux (Debian/RPM) PEP 668
+
+If system Python is externally managed, Dompack automatically retries installs in a local virtual environment (`.venv` if valid, otherwise `.dompack-venv`).
+
+Advanced override (system Python):
+
+```bash
+dompack --break-system-packages install web
+dompk --break-system-packages install web
+```
+
+## Bundle Aliases
+
+- Core aliases: `common`, `core`, `base`
+- Full setup aliases: `all`, `pydev`, `dev`, `setup`, `python`
+- Python tooling aliases: `bootstrap`, `boot`, `pytools`
 
 Examples:
 
-```
+```bash
 dompack install fa
 dompack install dj
-dompack install flask
 dompack install ml
-dompack install ai
-dompack install db
-dompack install all
+dompack install security
+dompack install bootstrap
 ```
 
----
+## Other Commands
 
-## 📚 Domain Bundles
-
-| Alias | Domain | Description |
-|-------|--------|-------------|
-| `db`, `da` | Databases | PostgreSQL, MySQL, MongoDB, Redis |
-| `ds` | Data Science | numpy, pandas, matplotlib, scipy |
-| `ml` | Machine Learning | scikit-learn, joblib |
-| `ai` | AI / NLP | transformers, tokenizers |
-| `dl` | Deep Learning | torch, torchvision |
-| `cv` | Computer Vision | opencv-python, scikit-image, pillow |
-| `gui` | GUI | PyQt5, Kivy |
-| `av` | Audio / Video | librosa, moviepy |
-| `web` | Web Utils | requests, httpx, beautifulsoup4 |
-| `fa`, `fastapi` | FastAPI Stack | fastapi, uvicorn, pydantic |
-| `fl`, `flask` | Flask Stack | flask & extensions |
-| `dj`, `django` | Django Stack | django, DRF, cors headers |
-| `net` | Networking | aiohttp, websockets, paramiko |
-| `security`, `sec`, `auth`, `cyber` | Security | JWT, cryptography, passlib |
-| `devops` | DevOps | docker, ansible |
-| `testing` | Testing | pytest, black, flake8 |
-| `file` | File Processing | docx, pypdf2, openpyxl |
-| `utils` | Utilities | dotenv, rich, loguru |
-| `fullstack` | Mixed Stack | Django + FastAPI + Flask |
-| `all` | Everything | All bundles combined |
-
----
-
-## 🧭 Examples
-
-### FastAPI install
-```
-dompack install fa
-```
-
-### Django install
-```
-dompack install dj
-```
-
-### Machine Learning setup
-```
-dompack install ml
-```
-
-### Install EVERYTHING
-```
-dompack install all
-```
-
-### Upgrade a bundle
-```
-dompack upgrade security
-```
-
-### Search packages
-```
-dompack search mongo
-```
-
-### Generate requirements.txt
-```
-dompack req ml
-```
-
-### Environment doctor
-```
+```bash
+dompack upgrade <bundle>
+dompack search <keyword>
 dompack doctor
+dompack update-self
+dompack req <bundle>
+dompack create-bundle <name> <pkg1> <pkg2> ...
 ```
 
----
+## Notes
 
-## 📝 License
+- Package name on PyPI: `dompk`
+- Console commands: `dompack`, `dompk`
+- Current release: `0.0.2`
 
-MIT License © 2025 Veeresh Hanni
+## License
 
----
-
-## ⭐ Support
-
-If Dompack helps you:
-
-- ⭐ Star it on GitHub  
-- 🛠 Contribute new bundles  
-- 📦 Share it with the Python community  
-
+MIT
